@@ -1,5 +1,5 @@
 import { useReducer, useEffect } from "react";
-import * as api from "./APIClient"
+import * as api from '../API/APIClient'
 
 // ACTIONS TYPES
 const ACTIONS = {
