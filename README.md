@@ -1,6 +1,9 @@
 # Introduction:
 This Project is mainly created for learning purposes, general goals in non order:
-- [ ] MUI Responsiveness
+- [ ] MUI
+    - [ ] Responsiveness
+    - [ ] Layouts
+    - [ ] Grid
 - [ ] React-router
 - [ ] React-DOM
 - [ ] Redux
@@ -22,7 +25,9 @@ Bonus:
 - [ ] migrate to Typescript
 - [ ] migrate to Nextjs
 
-
+CSS/HTML
+- [ ] Flex : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- [ ] Grid
 
 
 
