@@ -1,8 +1,11 @@
 # Introduction:
-This Project is mainly created for learning purposes:
+This Project is mainly created for learning purposes, general goals in non order:
 - [ ] MUI Responsiveness
+- [ ] React-router
+- [ ] React-DOM
 - [ ] Redux
 - [ ] Redux Saga for Async
+- [ ] redux-actions
 - [ ] useCallback
 - [ ] useMemo
 - [ ] Proper Refactor
@@ -10,10 +13,14 @@ This Project is mainly created for learning purposes:
 - [ ] Webpack
 - [ ] Deployment Process
 
+
 Bonus:
+- [ ] ContextAPI instead of Redux
+- [ ] Portals
 - [ ] Create your own Django REST API
-
-
+- [ ] Dockerize
+- [ ] migrate to Typescript
+- [ ] migrate to Nextjs
 
 
 
