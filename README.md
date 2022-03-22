@@ -1,3 +1,24 @@
+# Introduction:
+This Project is mainly created for learning purposes:
+- [ ] MUI Responsiveness
+- [ ] Redux
+- [ ] Redux Saga for Async
+- [ ] useCallback
+- [ ] useMemo
+- [ ] Proper Refactor
+- [ ] Babel
+- [ ] Webpack
+- [ ] Deployment Process
+
+Bonus:
+- [ ] Create your own Django REST API
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
