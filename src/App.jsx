@@ -8,7 +8,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import websiteLogo from './assets/weblogo.svg'
 
 import { useNavigate, Outlet, Route, Routes } from "react-router-dom";
-import HelloWorldScene from "./scenes/HelloWorldScene";
 
 
 // NOTE: WE DONT NEED THIS ANYMORE, CAN BE DELETED.
@@ -163,7 +162,6 @@ function App() {
 
       <Routes>
         <Route path='/' element={ <DisplayDataComponent books={books} query={query}></DisplayDataComponent> } />
-        <Route path='/fav' element={<HelloWorldScene />} />
       </Routes>
 
     </>

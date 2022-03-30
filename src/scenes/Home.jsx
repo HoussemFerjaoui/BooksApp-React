@@ -19,7 +19,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import websiteLogo from '../assets/weblogo.svg'
 
 import { useNavigate, Outlet, Route, Routes } from "react-router-dom";
-import HelloWorldScene from "./HelloWorldScene";
 import Search from "../components/Search"
 import Favorites from "../components/Favorites"
 
