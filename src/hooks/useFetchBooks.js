@@ -30,9 +30,12 @@ function reducer(state, action) {
 export default function useFetchBooks(query) {
     //console.log(query.toString())
     //console.log('this hook is being called ')
+    
     const [ state, dispatch ] = useReducer(reducer, { books: [], loading: false } );
     //console.log(state)
+    
     useEffect( () => {
+        if (query==null) return;
         dispatch({type: ACTIONS.MAKE_REQUEST})
         api.getBooks(query, dispatch, ACTIONS);
 

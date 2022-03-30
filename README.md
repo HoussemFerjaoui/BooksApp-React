@@ -15,7 +15,7 @@ This Project is mainly created for learning purposes, general goals in non order
 - [ ] Babel
 - [ ] Webpack
 - [ ] Deployment Process
-
+- [ ] Cache, localStorage
 
 Bonus:
 - [ ] ContextAPI instead of Redux
@@ -25,7 +25,7 @@ Bonus:
 - [ ] migrate to Typescript
 - [ ] migrate to Nextjs
 
-CSS/HTML
+CSS/HTML/JS
 - [ ] Flex : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 - [ ] Grid
 
