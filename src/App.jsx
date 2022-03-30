@@ -10,6 +10,9 @@ import websiteLogo from './assets/weblogo.svg'
 import { useNavigate, Outlet, Route, Routes } from "react-router-dom";
 import HelloWorldScene from "./scenes/HelloWorldScene";
 
+
+// NOTE: WE DONT NEED THIS ANYMORE, CAN BE DELETED.
+
 // {books.map((book) => <Typography variant='h6' color='initial'>{book.title}</Typography>)}
 //  {books.map((book) => <Typography fontWeight='Bold' align='center' variant='h6' color='initial'>{book.title}</Typography>)}
 const useStyles = makeStyles((theme) => ({
@@ -151,7 +154,6 @@ function App() {
             id="search-field"
             label="Search for books"
             onChange={(event) => handleInputChange(event)}
-
           />
           <Button sx={{ width: '40%' }} endIcon={<SearchIcon />} variant="contained" onClick={() => handleSearchButtonClick(search)}>Search</Button>
 
@@ -159,14 +161,10 @@ function App() {
 
       </Container>
 
-
-
-
       <Routes>
         <Route path='/' element={ <DisplayDataComponent books={books} query={query}></DisplayDataComponent> } />
         <Route path='/fav' element={<HelloWorldScene />} />
       </Routes>
-
 
     </>
 

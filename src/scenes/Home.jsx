@@ -10,16 +10,18 @@
 
 
 import React, { useState, useEffect } from "react";
-import useFetchBooks from "./hooks/useFetchBooks";
+import useFetchBooks from "../hooks/useFetchBooks";
 import { CssBaseline, Container, TextField, Button, Typography, Box, AppBar, Toolbar, CircularProgress, Alert } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import SearchIcon from '@mui/icons-material/Search';
 
-import websiteLogo from './assets/weblogo.svg'
+import websiteLogo from '../assets/weblogo.svg'
 
 import { useNavigate, Outlet, Route, Routes } from "react-router-dom";
-import HelloWorldScene from "./scenes/HelloWorldScene";
+import HelloWorldScene from "./HelloWorldScene";
+import Search from "../components/Search"
+import Favorites from "../components/Favorites"
 
 
 // Main APP Componenet  *************************************************************************************************************************
@@ -51,8 +53,8 @@ function App() {
       </Container>
 
       <Routes>
-        {/* <Route path='/' element={ <DisplayDataComponent books={books} query={query}></DisplayDataComponent> } /> */}
-        <Route path='/fav' element={<HelloWorldScene />} />
+        <Route path='/' element={ <Search /> } /> 
+        <Route path='/fav' element={<Favorites favBooksList={['The GodFather', 'The GodFather 2']} />} />
       </Routes>
 
     </>
