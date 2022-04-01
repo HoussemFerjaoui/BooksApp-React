@@ -1,9 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter } from 'react-router-dom';
 import Root from './scenes/index'
+
+import { createStore } from 'redux'
+
+import allReducers from './reducers'
+
+import { Provider } from 'react-redux'
+
+
+
+
+
+
+let store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+ store.subscribe( () => console.log(store.getState()) ) 
+
+
+
 
 const theme = createTheme({
   palette: {
@@ -15,11 +32,13 @@ const theme = createTheme({
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Root />
-      </BrowserRouter>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Root />
+        </BrowserRouter>
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

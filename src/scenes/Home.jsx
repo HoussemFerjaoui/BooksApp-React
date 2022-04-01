@@ -23,11 +23,14 @@ import Search from "../components/Search"
 import Favorites from "../components/Favorites"
 
 
+
 // Main APP Componenet  *************************************************************************************************************************
-function App() {
+function Home() {
 
   // router hooks
   let navigate = useNavigate(); 
+
+
 
   return (
     <>
@@ -49,6 +52,7 @@ function App() {
       <Container sx={{ marginTop: '3em' }} maxWidth="xs">
         <Box component="img" sx={{ marginTop: "2em", marginBottom: '5em' }} alt="XQuant Logo" src={websiteLogo} />
         
+
       </Container>
 
       <Routes>
@@ -61,6 +65,6 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
 
 // make fav list, append to it on click, and display/update

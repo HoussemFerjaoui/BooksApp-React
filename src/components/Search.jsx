@@ -2,12 +2,21 @@ import React, { useState, useEffect } from "react";
 import { TextField, Button, Typography, CircularProgress, Alert } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
+import { useSelector, useDispatch } from 'react-redux'
+
+import { addbooktofav } from '../actions/actions'
 
 import useFetchBooks from '../hooks/useFetchBooks';
 
 
 
 export default function Search() {
+
+    // redux hooks
+    const dispatch = useDispatch();
+    const favBooks = useSelector( (state) => state.booksReducer)  
+    console.log(favBooks)
+
     // Main App STUFF
     const [query, setQuery] = useState(null)
     const [search, setSearch] = useState(null)
@@ -26,10 +35,12 @@ export default function Search() {
 const DisplayDataComponent = (props) => {
     const { books, query } = props
 
-    const [favBooks, setFavBooks] = useState([])
+    //const [favBooks, setFavBooks] = useState([])
 
     const addtofavs = (book) => {
-      setFavBooks([...favBooks, book])
+      //setFavBooks([...favBooks, book])
+      dispatch( addbooktofav(book) )
+      console.log(favBooks)
     }
 
     return (

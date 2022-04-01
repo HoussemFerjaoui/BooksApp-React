@@ -1,25 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { Container, Typography, Button } from '@mui/material'
  
+import { useSelector, useDispatch } from 'react-redux'
+
+import { removebookfromfav } from "../actions/actions";
+
 
 export default function Favorites(props) {
- 
-
+    
+    // redux hooks
+    const favBooks = useSelector(state => state.booksReducer) 
+    const dispatch = useDispatch();
 
     const { favBooksList } = props
     console.log('KKK')
     console.log(favBooksList)
-    const [favBooks, setFavBooks] = useState([])
+    //const [favBooks, setFavBooks] = useState([])
 
-    useEffect(() => {
+    /* useEffect(() => {
       setFavBooks(favBooksList)
-    }, [favBooksList])
+    }, [favBooksList]) */
 
     // remove book Component -------------------------------------------------------------------------------------------------------------------------------------------------------
     const removeBook = (title) => {
-      console.log(title)
-      console.log(favBooks)
-      setFavBooks(favBooks.filter(item => item !== title))
+      //console.log(title)
+      //console.log(favBooks)
+      dispatch( removebookfromfav(title) )
+      //setFavBooks(favBooks.filter(item => item !== title))
     }
 
  
