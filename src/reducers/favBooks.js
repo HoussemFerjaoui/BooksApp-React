@@ -23,11 +23,19 @@ import { handleActions } from 'redux-actions'
 import actions from '../actions/actionType'
 
 
-let defaultState = []
-
+let defaultState = {
+    favbooks: []
+}
+//[...state.favbooks.filter( (book) => book!=payload.bookTitle )]
 const booksReducer = handleActions( {
-    [actions.bookAdded]: (state, {payload}) => { return [...state , payload.bookTitle] },
-    [actions.bookRemoved]: (state, {payload}) => { return [...state.filter( (book) => book!=payload.bookTitle )] }    
+    [actions.bookAdded]: (state, {payload}) => ({ 
+        ...state, 
+        favbooks: [...state.favbooks, payload.bookTitle]
+     }),
+    [actions.bookRemoved]: (state, {payload}) => ({ 
+        ...state, 
+        favbooks: state.favbooks.filter((book) => book != payload.bookTitle)
+     })    
     },
     defaultState
 )

@@ -14,8 +14,8 @@ export default function Search() {
 
     // redux hooks
     const dispatch = useDispatch();
-    const favBooks = useSelector( (state) => state.booksReducer)  
-    console.log(favBooks)
+    const favBooks = useSelector( (state) => state.booksReducer.favbooks)  
+    //console.log(favBooks)
 
     // Main App STUFF
     const [query, setQuery] = useState(null)
@@ -28,7 +28,7 @@ export default function Search() {
 
     const handleSearchButtonClick = (value) => {
     setQuery(value);
-    console.log(value)
+    //console.log(value)
     }
 
 // AllDataComponent, mainly has search result, but uses favcomponenet, for state access (favbooks) --------------------------------------------------------------------
@@ -40,7 +40,7 @@ const DisplayDataComponent = (props) => {
     const addtofavs = (book) => {
       //setFavBooks([...favBooks, book])
       dispatch( addbooktofav(book) )
-      console.log(favBooks)
+      //console.log(favBooks)
     }
 
     return (

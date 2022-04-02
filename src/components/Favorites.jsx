@@ -9,12 +9,12 @@ import { removebookfromfav } from "../actions/actions";
 export default function Favorites(props) {
     
     // redux hooks
-    const favBooks = useSelector(state => state.booksReducer) 
+    const favBooks = useSelector(state => state.booksReducer.favbooks) 
     const dispatch = useDispatch();
 
     const { favBooksList } = props
-    console.log('KKK')
-    console.log(favBooksList)
+    //console.log('KKK')
+    //console.log(favBooksList)
     //const [favBooks, setFavBooks] = useState([])
 
     /* useEffect(() => {
