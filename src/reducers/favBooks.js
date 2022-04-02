@@ -1,6 +1,6 @@
-import actions from '../actions/actionType'
+//import actions from '../actions/actionType'
 
-let initFavBooks = []
+/* let initFavBooks = []
 
 const booksReducer = (state = initFavBooks, action) => {
     switch (action.type) {
@@ -15,16 +15,22 @@ const booksReducer = (state = initFavBooks, action) => {
     }
 }
 
-export default booksReducer;
+export default booksReducer; */
  
 
 // migrating to redux-actions flux
-/* import { handleActions } from 'react-redux'
+import { handleActions } from 'redux-actions'
+import actions from '../actions/actionType'
 
-let initFavBooks = []
 
-export default booksReducer = handleActions( {
+let defaultState = []
 
-} )
- */
+const booksReducer = handleActions( {
+    [actions.bookAdded]: (state, {payload}) => { return [...state , payload.bookTitle] },
+    [actions.bookRemoved]: (state, {payload}) => { return [...state.filter( (book) => book!=payload.bookTitle )] }    
+    },
+    defaultState
+)
+ 
 
+export default booksReducer;
