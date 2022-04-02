@@ -18,3 +18,10 @@ export const addbooktofav = (book) =>  {
              bookTitle: book,
      }}
    }
+
+
+   export const logIn = () => {
+     return {
+       type: actions.log,
+     }
+   }

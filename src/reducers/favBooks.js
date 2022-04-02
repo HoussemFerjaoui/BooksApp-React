@@ -27,7 +27,7 @@ let defaultState = {
     favbooks: []
 }
 //[...state.favbooks.filter( (book) => book!=payload.bookTitle )]
-const booksReducer = handleActions( {
+export default handleActions( {
     [actions.bookAdded]: (state, {payload}) => ({ 
         ...state, 
         favbooks: [...state.favbooks, payload.bookTitle]
@@ -41,4 +41,4 @@ const booksReducer = handleActions( {
 )
  
 
-export default booksReducer;
+//export default booksReducer;
